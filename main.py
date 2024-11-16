@@ -7,6 +7,6 @@ with open('text.txt',encoding="UTF-8") as file:
             count+=1
             arr.append(line)
 arr.sort()
-
-print(arr)
+for i in range(len(arr)):
+    print(arr[i])
 print("Количество строк содержащих подстроку ",str,":",count)
