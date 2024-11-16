@@ -1,8 +1,7 @@
-import io
 str = str(input("Введи строку для поиска: "))
 count = 0
 arr =list()
-with io.open('text.txt',encoding="UTF-8") as file:
+with open('text.txt',encoding="UTF-8") as file:
     for line in file:
         if str in line:
             count+=1
