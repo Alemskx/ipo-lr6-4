@@ -1,12 +1,16 @@
-str = str(input("Введи строку для поиска: "))
+search_string = input("Введи строку для поиска: ").lower()
 count = 0
-arr =list()
-with open('text.txt',encoding="UTF-8") as file:
+arr = []
+
+with open('text.txt', encoding="UTF-8") as file:
     for line in file:
-        if str in line:
-            count+=1
+        line_lower = line.lower()
+        if search_string in line_lower:
+            count += 1
             arr.append(line)
+
 arr.sort()
+
 for i in range(len(arr)):
     print(arr[i])
-print("Количество строк содержащих подстроку ",str,":",count)
+print("Количество строк, содержащих подстроку '",search_string,"' = ",count)
